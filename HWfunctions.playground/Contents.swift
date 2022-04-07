@@ -18,7 +18,7 @@ print("")
 print("")
 print("")
 print("Задание 2")
-print(sumOf4Numbers(n: 2874))
+print(sumOf4Numbers(n: 4263))
 print("")
 print("")
 print("")
@@ -35,6 +35,7 @@ print("")
 print("")
 print("Задание 6")
 print(factorialOfNum(num: 20))
+print(factorialRecursion(num: 20))
 print("")
 print("")
 print("")
@@ -81,7 +82,6 @@ func pow(num: Int, degree: Int = 10) -> Int {
 
 func factorialOfNum(num: Int) -> Int {
     print("Факториал числа \(num): ")
-
     var num = num
     var result = num
     
@@ -91,6 +91,15 @@ func factorialOfNum(num: Int) -> Int {
     }
     
     return result
+}
+
+func factorialRecursion(num: Int) -> Int {
+    if num == 0 {
+        return 1
+    }
+    else {
+        return num * factorialRecursion(num: num - 1)
+    }
 }
 
 func plus(num1: Int, num2: Int) -> Int {
